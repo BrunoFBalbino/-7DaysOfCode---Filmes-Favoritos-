@@ -1,5 +1,144 @@
 :root {
-    --corFundo: rgba(23, 22, 46, 1)
-    --corTexto1 rgba(255, 255, 255, 1)     
+    --corFundo: rgba(23, 22, 46, 1);
+    --corCard: rgba(29, 28, 59, 1);
+    --corTexto1: rgba(255, 255, 255, 1);
+    --corTexto2: rgba(172, 172, 172, 1);
+}
 
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5%;
+    background-color: var(--corFundo);
+    font-family: "Kumbh Sans", serif;
+    font-size: 18px;
+    color: var(--corTexto1);
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 2rem;
+    h1 {
+        font-size: 36px;
+        font-weight: 600;
+    }
+
+}
+
+
+.input__pesquisa {
+    width: 40rem;
+    height: 4.7rem;
+    border-radius: 0.5rem;
+    background: url(../img/search-icon.svg) no-repeat right 1rem center / 1.5rem ;
+    background-color: rgba(255, 255, 255, 20%);
+    border: none;
+    color: white;
+}
+
+/* Esconde o checkbox padrão */
+.input__checkbox {
+    display: none;
+}
+
+/* Estiliza a caixa do checkbox */
+.checkbox-container label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 16px;
+    color: white;
+}
+
+/* Caixa do checkbox customizada */
+.checkbox-container label::before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    border: 2px solid rgba(112, 110, 168, 1);
+    border-radius: 5px;
+    margin-right: 10px;
+    display: inline-block;
+    transition: background 0.3s, border-color 0.3s;
+}
+
+/* Ícone de check quando marcado */
+.input__checkbox:checked + label::before {
+    border-color: rgb(151, 148, 231);
+    content: "✔";
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 18px;
+}
+
+
+.cards {
+    display: flex;
+    flex-direction: row;
+    width: 75vw;
+    margin: 1rem 0;
+    padding: 2%;
+    border-radius: 8px;
+    align-items: center;
+    text-align: justify;
+    background-color: var(--corCard);
+    justify-content: space-between;
+    box-shadow: 1.44px 1.07px 2.42px black;
+    font-weight: 500;
+
+    .descricao {
+        width: 50%;
+        color: var(--corTexto2);
+        word-wrap: break-word;
+        text-align: left;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: normal;
+    }
+}
+
+.cards__poster {
+    width: 139px;
+    height: 139px;
+    background-color: var(--corTexto2);
+    border-radius: 800px;
+
+}
+
+h2 {
+    width: 268px;
+    word-wrap: break-word;
+    text-align: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+}
+
+.cards__info {
+    display: flex;
+    flex-direction: column;
+
+    .cards__info__avaliar {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 0.5rem;
+
+        div {
+            display: flex;
+            flex-direction: row;
+            font-weight: 400;
+
+            img {
+                margin-right: 0.5rem;
+            }
+        }
+
+    }
 }
