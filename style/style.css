@@ -101,6 +101,14 @@ header{
         text-overflow: ellipsis;
         white-space: normal;
     }
+   
+}
+
+.card__favoritar__button {
+    background: none;
+    border-radius: 25px;
+    border: none;
+
 }
 
 .cards__poster {
@@ -112,7 +120,8 @@ header{
 }
 
 h2 {
-    width: 268px;
+    width: 17rem;
+    height: auto;
     word-wrap: break-word;
     text-align: left;
     overflow: hidden;
